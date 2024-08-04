@@ -1,0 +1,13 @@
+Execution Flow :
+
+Based on the Requirement I wrote the Script in Cucumber integrated with TestNG.
+I followed folder structure as my project style ,POM for maintaining the locators and StepDefiniton 
+to maintain actions ,Hooks for browser launch and quite ,Runner to executed the Script.
+I launched the URL and verified the Fitpeo home page screen.
+I then selected the revenue calculator module on the home page screen and moved the revenue calculator slider to 820.
+I checked if the values were updated in the field box. Subsequently, I changed the value in the field box to 560 and verified whether the slider moved accordingly.
+After selecting the checkbox of given CPT codes, I asserted that the total recurring reimbursement amount reflected in the header was correct.
+  
+  
+   
+ 
