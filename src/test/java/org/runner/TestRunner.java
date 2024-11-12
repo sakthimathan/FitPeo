@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions.SnippetType;
 
 @CucumberOptions(features = "C:\\Users\\Lenovo\\eclipse-workspace_Sakthi\\FitPeoAssessment\\src\\test\\resources\\Features",
                 dryRun = !true, glue = "org.stepDefenition", 
-                plugin = {"pretty", "html:target/cucumber-testNGreports.html" },snippets = SnippetType.CAMELCASE)
+                plugin = {"pretty", "html:target/cucumber-testNGreports.html" , "json:target/cucumber-report.json" },snippets = SnippetType.CAMELCASE)
 
 public class TestRunner extends AbstractTestNGCucumberTests{
 
