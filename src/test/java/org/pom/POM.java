@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.resuable.Reusable;
 
 public class POM extends Reusable {
@@ -34,10 +35,12 @@ public class POM extends Reusable {
 	private WebElement checkbox;
 
 	public void navigateCalculator() {
+		wait.until(ExpectedConditions.elementToBeClickable(revenueCalculatorPage));
 		click(revenueCalculatorPage);
 	}
 
 	public void scrollToRevCal() {
+		wait.until(ExpectedConditions.elementToBeClickable(textBox));
 		scrollEle(textBox);
 	}
 
