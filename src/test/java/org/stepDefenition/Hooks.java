@@ -16,10 +16,10 @@ public class Hooks extends Reusable {
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
-		wait= new WebDriverWait(driver, Duration.ofSeconds(50));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		wait= new WebDriverWait(driver, Duration.ofSeconds(60));
 		driver.get("https://www.fitpeo.com/");
-		Thread.sleep(1000);
+		
 
 	}
     

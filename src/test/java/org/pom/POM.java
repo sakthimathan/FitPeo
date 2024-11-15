@@ -14,7 +14,7 @@ public class POM extends Reusable {
 
 	public POM() {
 		PageFactory.initElements(driver, this);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 
 	@FindAll({ @FindBy(xpath = "//a[@href='/revenue-calculator']"),
@@ -37,7 +37,7 @@ public class POM extends Reusable {
 	private WebElement checkbox;
 
 	public void navigateCalculator() {
-		wait.until(ExpectedConditions.invisibilityOf(revenueCalculatorPage));
+		wait.until(ExpectedConditions.visibilityOf(revenueCalculatorPage));
 		click(revenueCalculatorPage);
 	}
 
