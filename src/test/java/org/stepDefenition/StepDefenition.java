@@ -18,7 +18,8 @@ public class StepDefenition extends Reusable {
 	}
 
 	@Given("I navigate to Revenue Calculator Page")
-	public void iNavigateToRevenueCalculatorPage() {
+	public void iNavigateToRevenueCalculatorPage() throws InterruptedException {
+		Thread.sleep(3000);
 		p.navigateCalculator();
 	}
 
