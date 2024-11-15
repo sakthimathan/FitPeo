@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,7 +17,8 @@ public class POM extends Reusable {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 
-	@FindBy(xpath = "//div[text()='Revenue Calculator']")
+	@FindAll({ @FindBy(xpath = "//a[@href='/revenue-calculator']"),
+			@FindBy(xpath = "//div[text()='Revenue Calculator']") })
 	private WebElement revenueCalculatorPage;
 
 	@FindBy(xpath = "//input[@type='range']")
@@ -49,8 +51,8 @@ public class POM extends Reusable {
 		click(textBox);
 		backSpace();
 		enterText(textBox, value);
-		//To check each actions I'm using Thread.Sleep 
-		Thread.sleep(3000); 
+		// To check each actions I'm using Thread.Sleep
+		Thread.sleep(3000);
 	}
 
 	public void textBox(String value) {
@@ -62,9 +64,6 @@ public class POM extends Reusable {
 		enterText(textBox, value);
 	}
 
-	
-
-	
 	public void clickCheckbox(String cptCode) throws InterruptedException {
 		String xpath = "//p[text()='" + cptCode
 				+ "']//parent::div//following-sibling::label//child::span//child::input";
@@ -77,9 +76,11 @@ public class POM extends Reusable {
 	public String validateTextBoxValue() {
 		return getAttribute(validate, "value");
 	}
+
 	public String validateSliderValue() {
 		return getAttribute(slider, "value");
 	}
+
 	public String totalReimbursement() {
 		return getText(reimbursementTotal);
 	}
