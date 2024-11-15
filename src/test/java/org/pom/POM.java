@@ -24,7 +24,7 @@ public class POM extends Reusable {
 	@FindBy(xpath = "//input[@type='number']")
 	private WebElement textBox;
 
-	@FindBy(xpath = "//p[text()='Total Recurring Reimbursement for all Patients Per Month:']/child::p[@class='MuiTypography-root MuiTypography-body1 inter css-hocx5c']")
+	@FindBy(xpath = "//p[text()='Total Recurring Reimbursement for all Patients Per Month:']/child::p[contains(@class,'MuiTypography-root MuiTypography-b')]")
 	private WebElement reimbursementTotal;
 
 	@FindBy(xpath = "//input[@data-index='0']")
