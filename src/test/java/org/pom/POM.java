@@ -35,7 +35,7 @@ public class POM extends Reusable {
 	private WebElement checkbox;
 
 	public void navigateCalculator() {
-		wait.until(ExpectedConditions.visibilityOf(revenueCalculatorPage));
+		wait.until(ExpectedConditions.invisibilityOf(revenueCalculatorPage));
 		click(revenueCalculatorPage);
 	}
 
