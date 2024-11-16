@@ -14,7 +14,7 @@ public class Hooks extends Reusable {
 	@Before
 	public void lanuch() throws InterruptedException {
 
-		driver = new ChromeDriver();
+		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		wait= new WebDriverWait(driver, Duration.ofSeconds(60));
