@@ -19,6 +19,7 @@ public class Hooks extends Reusable {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		wait= new WebDriverWait(driver, Duration.ofSeconds(60));
 		driver.get("https://www.fitpeo.com/");
+		Thread.sleep(3000);
 		
 
 	}

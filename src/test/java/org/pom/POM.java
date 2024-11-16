@@ -38,7 +38,7 @@ public class POM extends Reusable {
 
 	public void navigateCalculator() {
 		wait.until(ExpectedConditions.visibilityOf(revenueCalculatorPage));
-		click(revenueCalculatorPage);
+		elementclic(revenueCalculatorPage);
 	}
 
 	public void scrollToRevCal() {
